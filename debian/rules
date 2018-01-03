@@ -16,10 +16,11 @@ include /usr/share/dpkg/default.mk
 # package maintainers to append LDFLAGS
 #export DEB_LDFLAGS_MAINT_APPEND = -Wl,--as-needed
 
+export PYBUILD_NAME=freshdesk
 
 # main packaging script based on dh7 syntax
 %:
-	dh $@ --with python2
+	dh $@ --with python2,python3 --buildsystem=pybuild
 
 # debmake generated override targets
 # This is example for Cmake (See http://bugs.debian.org/641051 )
