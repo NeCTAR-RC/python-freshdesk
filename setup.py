@@ -12,4 +12,5 @@ setup(
     url='https://github.com/sjkingo/python-freshdesk',
     install_requires=['requests', 'python-dateutil'],
     packages=find_packages(),
+    include_package_data=True,
 )
